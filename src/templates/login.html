@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Loginsystem</title>
+	<link rel="shortcut icon" href="%%SERVERURL%%/res/icon.svg">
+	<link rel="stylesheet" type="text/css" href="%%SERVERURL%%/lib/bootstrap.min.css">
+</head>
+
+
+<body class="bg-light">
+	<nav class="navbar navbar-dark bg-dark justify-content-between" style="height: 60px;">
+		<a class="navbar-brand text-white">
+			<img src="%%SERVERURL%%/res/icon.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+			Loginsystem
+		</a>
+	</nav>
+	<div style="text-align: center; margin-left: 25px; margin-right: 25px; margin-top: 15px;">
+		<div class="row justify-content-center align-self-center">
+			%%MESSAGE%%
+		</div>
+		<div class="row justify-content-center align-self-center" style="margin-bottom: 25px;">
+			<div class="card bg-light mb-3" style="min-width: 22em; max-width: 30rem;">
+				<div class="card-header bg-dark text-white">Login</div>
+				<div class="card-body">
+					<form method="post" action="%%SERVERURL%%/index.php">
+						<input class="form-control mr-sm-2" type="text" placeholder="Username" name="user" autofocus>
+						<br>
+						<input class="form-control mr-sm-2" type="password" placeholder="Password" name="pwd">
+						<br>
+						<input type="hidden" name="nonce" value="%%NONCE%%">
+						<div style="text-align: right;">
+							<button class="btn btn-success mr-sm-2" type="submit">Login</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
