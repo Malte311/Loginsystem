@@ -19,4 +19,4 @@ In order to adjust the name of the application, simply replace the term 'Loginsy
 
 ## :page_facing_up: License
 
-This project is licensed under the [MIT License](https://github.com/Malte311/YouTube-Audio-Downloader/blob/master/LICENSE).
+This project is licensed under the [MIT License](https://github.com/Malte311/Loginsystem/blob/master/LICENSE).
