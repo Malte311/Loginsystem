@@ -44,9 +44,11 @@ class Template {
 	 * Adds a new replacement to the replacements array.
 	 * @param string $key The value which should be replaced.
 	 * @param string $value The substitution for the value which should be replaced.
+	 * @return Template Returns this object for method chaining.
 	 */
-	public function addReplacement($key, $value) : void {
+	public function addReplacement($key, $value) : Template {
 		$this->replacements[$key] = $value;
+		return $this;
 	}
 
 	/**
@@ -55,11 +57,11 @@ class Template {
 	 * @return string The html text with substituted values.
 	 */
 	private function substitute(string $html) : string {
-		foreach ($this->replacements as $key => $val) {
-			$html = str_replace($key, $val, $html);
-		}
-
-		return $html;
+		return str_replace(
+			array_keys($this->replacements),
+			array_values($this->replacements),
+			$html
+		);
 	}
 }
 

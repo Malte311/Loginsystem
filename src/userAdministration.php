@@ -1,5 +1,9 @@
 <?php
 
+if (php_sapi_name() !== 'cli') {
+	die('Commandline only!');
+}
+
 define('Loginsystem', 'ok');
 
 require_once(__DIR__ . '/php/autoload.php');
