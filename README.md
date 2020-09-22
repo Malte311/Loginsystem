@@ -20,7 +20,7 @@ Currently, there is no support for the users to change their password by themsel
 
 In order to adjust the name of the application, simply replace the term 'Loginsystem' in the `.html` files.
 
-Some countries, like Germany, require special legal notice on websites, like 'Impressum' and 'Datenschutz' in Germany. If these are not necessary, simple remove them from the page footer in the `.html` files.
+Some countries, like Germany, require special legal notice on websites, like _Impressum_ and _Datenschutz_ in Germany. If these are not necessary, simply remove them from the page footer in the `.html` files.
 
 ## :page_facing_up: License
 
