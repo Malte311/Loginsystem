@@ -7,11 +7,8 @@ addons:
     packages:
       - graphviz
 
-before_script: 
-  - pear channel-discover pear.phpdoc.org
-  - pear install phpdoc/phpDocumentor
-
-script: phpdoc -d ./src -t ./docs
+services:
+  - docker
 
 deploy:
 - provider: pages
@@ -20,3 +17,8 @@ deploy:
   skip-cleanup: true
   on:
     branch: master
+
+jobs:
+  include:
+    - stage: build docker image
+      script: bash ./build.sh

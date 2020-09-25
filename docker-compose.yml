@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  web:
+    image: quay.io/malte311/loginsystem:latest
+    container_name: loginsystem
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - ./data/:/php-code/data/
+    restart: always
+    environment:
+      - BASEURL=https://example.com
+      - SERVERURL=https://example.com/loginsystem
+      - IMPRESSUMURL=https://example.com/impressum
+      - DATENSCHUTZURL=https://example.com/datenschutz
