@@ -1,11 +1,52 @@
 # :closed_lock_with_key: Loginsystem
 
+![Build Status](https://travis-ci.com/Malte311/Loginsystem.svg?branch=master)
 [![GitHub license](https://img.shields.io/github/license/Malte311/Loginsystem)](https://github.com/Malte311/Loginsystem/blob/master/LICENSE)
+[![Documentation](https://img.shields.io/badge/-documentation-informational)](https://malte311.github.io/Loginsystem/)
 
 > This repository contains a simple login system template.
 
 ## :whale: Installation (via Docker)
-> Coming soon.
+
+1. Download the `docker-compose.yml` file _or_ clone the whole repository:
+
+```bash
+
+git clone git@github.com:Malte311/BookLibrary.git
+
+```
+
+2. Adjust the `docker-compose.yml` file. Specify the correct urls and adjust the port.
+
+```yaml
+
+version: "2"
+
+services:
+  web:
+    image: quay.io/malte311/loginsystem:latest
+    container_name: loginsystem
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - ./data/:/php-code/data/
+    restart: always
+    environment:
+      - BASEURL=https://example.com
+      - SERVERURL=https://example.com/loginsystem
+      - IMPRESSUMURL=https://example.com/impressum
+      - DATENSCHUTZURL=https://example.com/datenschutz
+
+```
+
+3. Get the newest Docker image and start a Docker container (inside of the project folder):
+
+```bash
+
+docker-compose pull
+docker-compose up -d
+
+```
 
 ## :key: Usage
 
