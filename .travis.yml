@@ -8,9 +8,10 @@ addons:
       - graphviz
 
 before_script: 
-  - curl -L http://phpdoc.org/phpDocumentor.phar --output ./phpdoc.phar
+  - pear channel-discover pear.phpdoc.org
+  - pear install phpdoc/phpDocumentor
 
-script: php ./phpdoc.phar -d ./php/classes -t ./docs
+script: phpdoc -d ./src -t ./docs
 
 deploy:
 - provider: pages
