@@ -32,10 +32,7 @@ services:
       - ./data/:/php-code/data/
     restart: always
     environment:
-      - BASEURL=https://example.com
       - SERVERURL=https://example.com/loginsystem
-      - IMPRESSUMURL=https://example.com/impressum
-      - DATENSCHUTZURL=https://example.com/datenschutz
 
 ```
 
@@ -60,8 +57,6 @@ In order to manage user accounts, one can use the `src/userAdministration.php` f
 Currently, there is no support for the users to change their password by themselves. There is no interface for user administration, only a simple console script in order to keep things simple.
 
 In order to adjust the name of the application, simply replace the term 'Loginsystem' in the `.html` files.
-
-Some countries, like Germany, require special legal notice on websites, like _Impressum_ and _Datenschutz_ in Germany. If these are not necessary, simply remove them from the page footer in the `.html` files.
 
 ## :page_facing_up: License
 
