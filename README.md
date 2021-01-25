@@ -16,7 +16,7 @@ git clone git@github.com:Malte311/Loginsystem.git
 
 ```
 
-2. Adjust the `docker-compose.yml` file. Specify the correct urls and adjust the port.
+2. Adjust the `docker-compose.yml` file. Specify the correct url and adjust the port.
 
 ```yaml
 
@@ -60,4 +60,4 @@ In order to adjust the name of the application, simply replace the term 'Loginsy
 
 ## :page_facing_up: License
 
-This project is licensed under the [MIT License](https://github.com/Malte311/Loginsystem/blob/master/LICENSE).
+This project is licensed under the terms of the [MIT License](https://github.com/Malte311/Loginsystem/blob/master/LICENSE).
